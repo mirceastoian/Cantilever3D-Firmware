@@ -36,7 +36,7 @@
  * Advanced settings can be found in Configuration_adv.h
  *
  */
-#define CONFIGURATION_H_VERSION 020001
+#define CONFIGURATION_H_VERSION 020002
 
 //===========================================================================
 //============================= Getting Started =============================
@@ -491,9 +491,9 @@
   //#define DEFAULT_Kd 440
 
   // Custom (Cantilever3D)
-  #define DEFAULT_Kp 41.40
-  #define DEFAULT_Ki 4.67
-  #define DEFAULT_Kd 91.68
+  #define DEFAULT_Kp 32.44
+  #define DEFAULT_Ki 2.70
+  #define DEFAULT_Kd 97.58
 
 #endif // PIDTEMP
 
@@ -1040,7 +1040,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR true
+#define INVERT_E0_DIR false
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
