@@ -31,7 +31,7 @@
  * Basic settings can be found in Configuration.h
  *
  */
-#define CONFIGURATION_ADV_H_VERSION 020001
+#define CONFIGURATION_ADV_H_VERSION 020002 // MS 18.11.2021
 
 // @section temperature
 
@@ -165,13 +165,13 @@
  * Thermal Protection parameters for the bed are just as above for hotends.
  */
 #if ENABLED(THERMAL_PROTECTION_BED)
-  #define THERMAL_PROTECTION_BED_PERIOD 20    // Seconds
-  #define THERMAL_PROTECTION_BED_HYSTERESIS 2 // Degrees Celsius
+  #define THERMAL_PROTECTION_BED_PERIOD 120    // Seconds // MS 17.11.2021
+  #define THERMAL_PROTECTION_BED_HYSTERESIS 4 // Degrees Celsius // MS 17.11.2021
 
   /**
    * As described above, except for the bed (M140/M190/M303).
    */
-  #define WATCH_BED_TEMP_PERIOD 60                // Seconds
+  #define WATCH_BED_TEMP_PERIOD 360                // Seconds // MS 17.11.2021
   #define WATCH_BED_TEMP_INCREASE 2               // Degrees Celsius
 #endif
 

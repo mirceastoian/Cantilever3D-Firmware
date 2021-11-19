@@ -36,7 +36,7 @@
  * Advanced settings can be found in Configuration_adv.h
  *
  */
-#define CONFIGURATION_H_VERSION 020002
+#define CONFIGURATION_H_VERSION 020003 // MS 27.10.2021
 
 //===========================================================================
 //============================= Getting Started =============================
@@ -491,9 +491,9 @@
   //#define DEFAULT_Kd 440
 
   // Custom (Cantilever3D)
-  #define DEFAULT_Kp 32.44
-  #define DEFAULT_Ki 2.70
-  #define DEFAULT_Kd 97.58
+  #define DEFAULT_Kp 27.98 // MS 18.11.2021
+  #define DEFAULT_Ki 2.31 // MS 18.11.2021
+  #define DEFAULT_Kd 84.85 // MS 18.11.2021
 
 #endif // PIDTEMP
 
@@ -514,7 +514,7 @@
  * heater. If your configuration is significantly different than this and you don't understand
  * the issues involved, don't use bed PID until someone else verifies that your hardware works.
  */
-//#define PIDTEMPBED
+#define PIDTEMPBED // MS 27.10.2021
 
 //#define BED_LIMIT_SWITCHING
 
@@ -532,9 +532,9 @@
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 10.00
-  #define DEFAULT_bedKi .023
-  #define DEFAULT_bedKd 305.4
+  // #define DEFAULT_bedKp 10.00
+  // #define DEFAULT_bedKi .023
+  // #define DEFAULT_bedKd 305.4
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from pidautotune
@@ -543,6 +543,11 @@
   //#define DEFAULT_bedKd 1675.16
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
+
+  // Cantilever3D
+  #define DEFAULT_bedKp 389.26 // MS 19.11.2021
+  #define DEFAULT_bedKi 55.32 // MS 19.11.2021
+  #define DEFAULT_bedKd 1826.14 // MS 19.11.2021
 #endif // PIDTEMPBED
 
 // @section extruder
@@ -583,7 +588,7 @@
 
 #define THERMAL_PROTECTION_HOTENDS // Enable thermal protection for all extruders
 #define THERMAL_PROTECTION_BED     // Enable thermal protection for the heated bed
-#define THERMAL_PROTECTION_CHAMBER // Enable thermal protection for the heated chamber
+// #define THERMAL_PROTECTION_CHAMBER // Enable thermal protection for the heated chamber // MS 17.11.2021
 
 //===========================================================================
 //============================= Mechanical Settings =========================
@@ -724,7 +729,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 405.6, 90.75 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 405.6, 104.63 } // MS 18.11.2021
 // #define DEFAULT_AXIS_STEPS_PER_UNIT   { 40, 40, 400*1.014, 100 } // 405.6
 
 /**
@@ -934,7 +939,7 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { -33, -29, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { -33, -29, -1.4 }
 
 // Certain types of probes need to stay away from edges
 #define MIN_PROBE_EDGE 0
